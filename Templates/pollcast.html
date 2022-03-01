@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make Poll</title>
+</head>
+<body>
+<form action = "\" method="POST">
+<div>
+    <h2>{{question}}</h2>
+</div>
+<div>
+    <h3>Options</h3>
+    <input type="radio" name="option" value = 1 placeholder="Option1" required>{{op1}}<br><br>
+    <input type="radio" name="option" value = 2 placeholder="Option2" required>{{op2}}<br><br>
+    <input type="radio" name="option" value = 3 placeholder="Option3" required>{{op3}}<br><br>
+    <input type="radio" name="option" value = 4 placeholder="Option4" required>{{op4}}<br><br>
+</div>
+<div>
+    <button type="submit" name="submit" value="{{poll_id}}">Submit</button>
+</div>
+</form>
+</body>
+</html>

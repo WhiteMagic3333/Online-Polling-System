@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>Verdict</title>
+        <style>
+            button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  font-size: 1.5em;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+    <h1>Login Portal</h1>
+    <h2>Select a Poll</h2>
+    <h1>{{msg}}</h1>
+        <form action="/loginpoll" method="POST">
+            {% for n in range(l) %}
+            <div>
+                <button type="submit" value="{{arr[n][0]}}" name="submit">{{n + 1}}.{{arr[n][1]}}</button>
+            </div>
+            {% endfor %}
+            <br><br><br><br><br><br>
+        <button type="submit" formaction="/logout" class="logout">Logged in as {{name}}, Click here to logout</button>
+        </form>
+    </body>
+</html>

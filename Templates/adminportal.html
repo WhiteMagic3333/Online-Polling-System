@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Portal</title>
+    <style>
+    .logout {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  font-size: 1.0em;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+            button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  font-size: 1.3em;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+   </style>
+</head>
+<body>
+    <h1>Admin Portal</h1>
+    <h2>Create a poll that</h2>
+    <h3>{{message}}</h3>
+    <br><br><br>
+    <form action="/polltype" method="POST">
+            <div>
+                <button type="submit" value=1 name="submit">1. Does Not Require Login (Guest Login)</button>
+            </div>
+        <br>
+            <div>
+                <button type="submit" value=2 name="submit">2. Requires Login</button>
+            </div>
+        <br><br><br><br><br><br>
+        <button type="submit" formaction="/logout" class="logout">Logged in as {{name}}, Click here to logout</button>
+        </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>Results</title>
+        <style>
+            .question {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  font-size: 1.3em;
+  cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+    <h1>Results</h1>
+            {% for n in range(l) %}
+            <div>
+                <h2 class = "question">{{n + 1}}.{{arr[n][2]}}</h2>
+                <h3>{{arr[n][3]}} = {{arr[n][7]}}</h3>
+                <h3>{{arr[n][4]}} = {{arr[n][8]}}</h3>
+                <h3>{{arr[n][5]}} = {{arr[n][9]}}</h3>
+                <h3>{{arr[n][6]}} = {{arr[n][10]}}</h3>
+            </div>
+            {% endfor %}
+    </body>
+</html>

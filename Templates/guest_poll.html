@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>Verdict</title>
+        <style>
+            button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  font-size: 1.5em;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+    <h1>Guest Portal</h1>
+    <h2>Select a Poll</h2>
+        <form action="/guestpoll" method="POST">
+            {% for n in range(l) %}
+            <div>
+                <button type="submit" value="{{arr[n][0]}}" name="submit">{{n + 1}}.{{arr[n][1]}}</button>
+            </div>
+            {% endfor %}
+        </form>
+    </body>
+</html>
